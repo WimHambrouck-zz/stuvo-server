@@ -14,7 +14,7 @@ class SessionManager {
 	/**
 	 * Initialize session manager
 	 */
-	function __construct($config = array()){
+	function __construct($config = array()){		
 		$this -> db = new DatabaseManager($config['database']);
 	}
 

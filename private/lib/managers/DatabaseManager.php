@@ -4,7 +4,7 @@
  * @copyright Maxim Van de Wynckel 2014
  * ------------------------------------- */
 
-include_once 'fix_mysql.inc.php'
+//include_once 'fix_mysql.inc.php'
 
 /* MySQL Database class */
 class DatabaseManager
@@ -12,31 +12,31 @@ class DatabaseManager
     var $con;
 	var $mysqldb;
     function __construct($db = array())
-    {
+    {		
     	$this->mysqldb = $db;
-        $this->con = mysql_connect($db['hostname'], $db['username'], $db['password'], true) or die('Error connecting to MySQL');
-        mysql_select_db($db['database'], $this->con) or die('Database ' . $db['database'] . ' does not exist!');
+        $this->con = mysqli_connect($db['hostname'], $db['username'], $db['password'], $db['database']) or die('Error connecting to MySQL');
+        //mysql_select_db($db['database'], $this->con) or die('Database ' . $db['database'] . ' does not exist!');
 	}
     function __destruct()
     {
-        mysql_close($this->con);
+        mysqli_close($this->con);
     }
     function query($s = '', $rows = false, $organize = true)
     {
-        if (!$q = mysql_query($s, $this->con))
+        if (!$q = mysqli_query($this->con, $s))
             return false;
         if ($rows !== false)
             $rows = intval($rows);
         $rez   = array();
         $count = 0;
         $type  = $organize ? MYSQL_NUM : MYSQL_ASSOC;
-        while (($rows === false || $count < $rows) && $line = mysql_fetch_array($q, $type)) {
+        while (($rows === false || $count < $rows) && $line = mysqli_fetch_array($q, $type)) {
             if ($organize) {
                 foreach ($line as $field_id => $value) {
-                    $table = mysql_field_table($q, $field_id);
+                    $table = mysqli_field_table($q, $field_id);
                     if ($table === '')
                         $table = 0;
-                    $field                       = mysql_field_name($q, $field_id);
+                    $field                       = mysqli_field_name($q, $field_id);
                     $rez[$count][$table][$field] = $value;
                 }
             } else {
@@ -44,13 +44,13 @@ class DatabaseManager
             }
             ++$count;
         }
-        if (!mysql_free_result($q))
+        if (!mysqli_free_result($q))
             return false;
         return $rez;
     }
     function execute($s = '')
     {
-        if (mysql_query($s, $this->con))
+        if (mysqli_query($this->con, $s))
             return true;
         return false;
     }
@@ -110,7 +110,7 @@ class DatabaseManager
             if (is_array($value) && !empty($value[0]))
                 $what_to_set[] = "`$field`='{$value[0]}'";
             else
-                $what_to_set[] = "`$field`='" . mysql_real_escape_string($value, $this->con) . "'";
+                $what_to_set[] = "`$field`='" . mysqli_real_escape_string($value, $this->con) . "'";
         }
         $what_to_set_string = implode(',', $what_to_set);
 		if ($this->mysqldb['debug'] == true)
@@ -129,13 +129,13 @@ class DatabaseManager
             if (is_array($value) && !empty($value[0]))
                 $values[] = $value[0];
             else
-                $values[] = "'" . mysql_real_escape_string($value, $this->con) . "'";
+                $values[] = "'" . mysqli_real_escape_string($value, $this->con) . "'";
         }
         $s = "INSERT INTO $table (`" . implode('`,`', $fields) . '`) VALUES (' . implode(',', $values) . ')';
 		if ($this->mysqldb['debug'] == true)
 			var_dump($s);
-	    if (mysql_query($s, $this->con))
-            return mysql_insert_id($this->con);
+	    if (mysqli_query($this->con, $s))
+            return mysqli_insert_id($this->con);
         return false;
     }
     function delete($table = null, $conditions = 'FALSE')
@@ -172,7 +172,7 @@ class DatabaseManager
         }
     }
     function escape($data){
-        return mysql_real_escape_string($data,$this->con);
+        return mysqli_real_escape_string($data,$this->con);
     }
 	function getPrefix(){
 		$table = $this->mysqldb['prefix'];
