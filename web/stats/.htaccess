@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Members Only"
-AuthUserFile /var/www/clients/client5/web9/web/stats/.htpasswd_stats
-require valid-user
