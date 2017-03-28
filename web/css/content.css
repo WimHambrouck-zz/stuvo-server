@@ -1,0 +1,84 @@
+/* --------------------------------------
+ * MVdW CMS
+ * @copyright Maxim Van de Wynckel 2014
+ * ------------------------------------- */
+ 
+/* Defaults */
+body, html{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	background-color: #FFFFF;
+	font-family: 'openSans';
+}
+
+#content {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	max-width: 1600px;
+	margin-bottom: 60px;
+}
+
+.form-horizontal .row{
+	margin-bottom: 5px;
+}
+.form-horizontal .col-sm-5{
+	margin-bottom: 5px;
+}
+
+a.thumbnail.selected{
+	border-color: #6666FF;
+	box-shadow: 0px 0px 5px #6666FF;
+}
+
+.img-design{
+	height: 350px;
+	margin: 15px;
+}
+
+.panel-heading a:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";    
+    float: right; 
+    color: grey; 
+}
+.panel-heading a.collapsed:after {
+    content: "\e080";
+}
+
+.img-zoom{
+	max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+	#content {
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-top: 10px;
+	}
+	.img-banner{
+		display: none;
+	}
+	.mobile-hide{
+		display: none;
+	}
+	.wizard .steps{
+		display: none;
+	}
+}
+
+@media (max-width: 500px) {
+	#content {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+	}
+	.row{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+

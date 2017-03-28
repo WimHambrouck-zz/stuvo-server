@@ -1,0 +1,54 @@
+header {
+	height: 100px;
+	border-top: solid 4px #ea1d24;
+	border-bottom: solid 4px #ea1d24;
+	box-shadow: 0px 0px 4px #ea1d24;
+	-moz-box-shadow: 0px 0px 4px #ea1d24;
+	-webkit-box-shadow: 0px 0px 4px #ea1d24;
+}
+header .dropdown-menu {
+	margin-top: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	right: 0;
+	left: auto;
+}
+#header-logo {
+	background-image: url("../images/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100px;
+	margin-left: 40px;
+	margin-top: 15px;
+	float: left;
+}
+#header-logo:hover {
+	background-image: url("../images/logo-glow.png");
+}
+.nav-pills {
+	position: absolute;
+	right: 80px;
+	top: 30px;
+}
+header a {
+	color: #062d5c;
+}
+@media (max-width: 1000px) {
+	header {
+		height: 50px;
+		border-top: none;
+	}
+	.nav-pills {
+		right: 10px;
+		top: 3px;
+	}
+	#header-logo {
+		height: 35px;
+		margin-left: 10px;
+		margin-top:5px;
+	}
+	header .dropdown-menu {
+		width: 250px;
+	}
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<contacten>
+	<contact>
+        <departement>Sociaaljuridisch advies</departement>
+        <picture>img/advies.png</picture>
+		<voornaam>Angelique</voornaam>
+        <achternaam>Roels</achternaam>
+		<email>angelique.roels@ehb.be</email>
+		<telefoonnummer>025271499</telefoonnummer>
+		<omschrijving>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu sagittis metus. Ut a suscipit dolor. Aenean non dolor id nunc condimentum finibus. Phasellus eget sollicitudin mauris, a consectetur ante. Maecenas a placerat nisl, et mattis erat. Vestibulum vel ullamcorper turpis. Mauris quis cursus quam. Nulla sit amet mi at tellus commodo tristique id vitae turpis. Cras id magna nibh. Morbi rutrum blandit ultricies.</omschrijving>
+	</contact>
+    	<contact>
+        <departement>Centen voor studenten</departement>
+        <picture>img/centen.png</picture>
+		<voornaam>Angelique</voornaam>
+        <achternaam>Roels</achternaam>
+		<email>angelique.roels@ehb.be</email>
+		<telefoonnummer>025271499</telefoonnummer>
+		<omschrijving>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu sagittis metus. Ut a suscipit dolor. Aenean non dolor id nunc condimentum finibus. Phasellus eget sollicitudin mauris, a consectetur ante. Maecenas a placerat nisl, et mattis erat. Vestibulum vel ullamcorper turpis. Mauris quis cursus quam. Nulla sit amet mi at tellus commodo tristique id vitae turpis. Cras id magna nibh. Morbi rutrum blandit ultricies.</omschrijving>
+	</contact>
+	<contact>
+        <departement>Diversiteit</departement>
+        <picture>img/diversiteit.png</picture>
+		<voornaam>Sofie</voornaam>
+        <achternaam>Giets</achternaam>
+		<email>sofie.giets@ehb.be</email>
+		<telefoonnummer>025268502</telefoonnummer>
+		<omschrijving>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu sagittis metus. Ut a suscipit dolor. Aenean non dolor id nunc condimentum finibus. Phasellus eget sollicitudin mauris, a consectetur ante. Maecenas a placerat nisl, et mattis erat. Vestibulum vel ullamcorper turpis. Mauris quis cursus quam. Nulla sit amet mi at tellus commodo tristique id vitae turpis. Cras id magna nibh. Morbi rutrum blandit ultricies.</omschrijving>
+	</contact>
+    <contact>
+        <departement>Kot en vervoer</departement>
+        <picture>img/kot.png</picture>
+		<voornaam>Lize</voornaam>
+        <achternaam>Maes</achternaam>
+		<email>lize.maes@ehb.be</email>
+		<telefoonnummer>024761617</telefoonnummer>
+		<omschrijving>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu sagittis metus. Ut a suscipit dolor. Aenean non dolor id nunc condimentum finibus. Phasellus eget sollicitudin mauris, a consectetur ante. Maecenas a placerat nisl, et mattis erat. Vestibulum vel ullamcorper turpis. Mauris quis cursus quam. Nulla sit amet mi at tellus commodo tristique id vitae turpis. Cras id magna nibh. Morbi rutrum blandit ultricies.</omschrijving>
+	</contact>
+    <contact>
+        <departement>Sport en cultuur</departement>
+        <picture>img/sport.png</picture>
+		<voornaam>Evelien</voornaam>
+        <achternaam>Aertssen</achternaam>
+		<email>evelien.aertssen@ehb.be</email>
+		<telefoonnummer>025591577</telefoonnummer>
+		<voornaam>Sofie</voornaam>
+        <achternaam>Haegemans</achternaam>
+		<email>sofie.haegemenas@ehb.be</email>
+		<telefoonnummer>025591578</telefoonnummer>
+		<omschrijving>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu sagittis metus. Ut a suscipit dolor. Aenean non dolor id nunc condimentum finibus. Phasellus eget sollicitudin mauris, a consectetur ante. Maecenas a placerat nisl, et mattis erat. Vestibulum vel ullamcorper turpis. Mauris quis cursus quam. Nulla sit amet mi at tellus commodo tristique id vitae turpis. Cras id magna nibh. Morbi rutrum blandit ultricies.</omschrijving>
+	</contact>
+    <contact>
+        <departement>Studentenresto's</departement>
+        <picture>img/resto.png</picture>
+		<telefoonnummer>025591576</telefoonnummer>
+		<omschrijving>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu sagittis metus. Ut a suscipit dolor. Aenean non dolor id nunc condimentum finibus. Phasellus eget sollicitudin mauris, a consectetur ante. Maecenas a placerat nisl, et mattis erat. Vestibulum vel ullamcorper turpis. Mauris quis cursus quam. Nulla sit amet mi at tellus commodo tristique id vitae turpis. Cras id magna nibh. Morbi rutrum blandit ultricies.</omschrijving>
+	</contact>
+</contacten>
+
